@@ -1,0 +1,29 @@
+{Un nombre parfait est un nombre naturel n non nul qui est égal à la somme de ses
+diviseurs stricts (n exclus).
+Exemple : 6 = 1 + 2 + 3
+a. Écrire en langage algorithmique une fonction booléenne qui retourne vrai si un
+entier n passé en paramètre est un nombre parfait, faux sinon.
+b. Écrire en langage algorithmique le programme principal permettant d’afficher la
+liste des nombres parfaits compris entre 1 et 10000. On utilisera le résultat renvoyé
+par la fonction précédente.
+c. Donner une implementation en C des procedures et/ou fonctions.}
+
+algorithme parfait;
+VAR n,i:entier;
+fonction parfait(n:entier):booleen;
+var i,somme:entier;
+debut
+	somme = 1;
+	pour i <- 2 à (n DIV 2) faire
+		si n MOD i = 0 alors
+			somme <- somme + i;
+	si n = somme alors
+		return vrai;
+	sinon 
+		return faux;
+fin;
+debut
+	pour i <- 1 à 10000 faire
+		si parfait(i) alors
+			ecrire(i);
+fin;

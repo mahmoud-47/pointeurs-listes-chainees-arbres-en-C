@@ -1,0 +1,10 @@
+{Ecrire une fonction C lirePharse (char maPhrase[]) qui reçoit une phrase (contenue dans la chaîne
+de caractères maPhrase) et affiche la longueur de la phrase, le nombre de signes de ponctuation et
+le nombre de chiffres contenus dans la phrase.
+On se servira des deux fonctions suivantes :
+ boolean JeSuisUnSigneDePonctuation(char c) qui renvoie true si le paramètre reçu c’est
+un signe de ponctuation et false sinon.
+ boolean JeSuisUnChiffre(char c) qui renvoie true si le paramètre reçu c’est un chiffre et
+false sinon. (On pourra définir le type booléen en langage C ou utiliser le type int)
+}
+

@@ -1,0 +1,6 @@
+{Écrire l’algorithme d’un sous-programme qui calcule la somme des n premiers entiers.
+Rappel : 1 + 2 + 3 + ... + n = n(n+1) / 2}
+fonction somme(n:entier):entier;
+debut
+	return n*(n+1) DIV 2;
+fin;

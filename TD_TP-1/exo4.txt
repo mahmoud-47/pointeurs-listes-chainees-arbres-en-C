@@ -1,0 +1,22 @@
+{Ecrire une fonction C qui affiche le chiffre le plus à gauche d’un nombre entier positif pris en paramètre
+et qui renvoie le reste de ce nombre. Par exemple, pour 456, la fonction affiche 4 et renvoie 56.
+Ecrire un programme C qui utilise cette fonction pour afficher de gauche à droite les chiffres d’un entier
+saisi au clavier.}
+
+fonction left(n : entier):entier;
+debut
+	si n<10 alors
+	debut
+		ecrire(n);
+		return 0;
+	fin;
+	r <- 0; m <- 1;
+	tantque n > 10 faire
+	debut
+		r <- (n MOD 10)*m + r;
+		n <- n DIV 10;
+		m <- m * 10;
+	fin;
+	ecrire(n);
+	return r;
+fin;

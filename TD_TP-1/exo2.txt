@@ -1,0 +1,16 @@
+{Ecrire une procédure qui reçoit cinq paramètres et qui met dans le troisième argument le résultat de la
+division du premier par le deuxième et dans le quatrième argument le résultat de la division du deuxième
+par le premier. Le cinquième argument sera un booléen qui signifiera que toutes les divisions ont été
+possibles ou non. Donner une implémentation en C de la procédure précédente.}
+
+procedure cinq(p1,p2:entier;VAR p3,p4:entier;VAR p5 : booleen);
+debut
+	si p1<>0 et p2<>0 alors
+	 debut
+	 	p5 <- vrai;
+		p3 <- p1 DIV p2;
+		p4 <- p2 DIV p1;
+	 fin
+	sinon
+	 p5 <- faux;
+fin;

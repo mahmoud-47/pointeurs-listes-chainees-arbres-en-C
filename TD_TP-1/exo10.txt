@@ -1,0 +1,41 @@
+{On souhaite écrire un algorithme qui permet d’envoyer des SMS à partir d’un téléphone portable
+de marque SanarMobile. Les téléphones SanarMobile disposent d’une bibliothèque de fonctions
+préenregistrées utilisables directement par les opérateurs téléphoniques. L’une de ces fonctions
+yoneeBataaxal (message : chaine de caracteres, numeroDestinataire : tableau d’entiers) : booléen
+permet d’envoyer un message à un numéro donné ; elle renvoie true si le message est bien envoyé
+et false sinon.
+En se servant de cette fonction, écrire un algorithme qui permet de saisir un message et un numéro
+de téléphone, envoie le message via un téléphone SanarMobile et informe l’utilisateur sur la suite
+de son message (« envoyé » ou « non envoyé »).}
+
+algorithme message;
+TYPE tab = Tableau[1..20] de entier;
+var message:chaine de caracteres;
+	numero : tab;
+	num,i,t,left,right : entier;
+
+debut
+	ecrire('Message ');
+	lire(message);
+	ecrire('Numero ');
+	lire(num);
+	i<-1;
+	tantque num > 0 faire
+	debut
+		numero[i] <- num MOD 10;
+		num <- num DIV 10; i <- i + 1;
+	fin;
+	left <- 1; right <- i-1;
+	tantque left<right faire
+	debut
+		t <- numero[left];
+		numero[left] <- numero[right];
+		numero[right] <- t;
+		left <- left + 1;
+		right <- right - 1;
+	fin;
+	si yoneeBataaxal(message,numero) alors
+		ecrire('Message envoyé avec succés')
+	sinon
+		ecrire('Non envoyé');
+fin;

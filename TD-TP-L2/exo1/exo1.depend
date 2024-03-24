@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1649980307 source:/home/mahmoud/Documents/TD-TP-L3/exo1/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Entreprise.h"
+
+1649979704 /home/mahmoud/Documents/TD-TP-L3/exo1/Entreprise.h
+
+1649985130 source:/home/mahmoud/Documents/TD-TP-L3/exo1/Entreprise.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Entreprise.h"
+

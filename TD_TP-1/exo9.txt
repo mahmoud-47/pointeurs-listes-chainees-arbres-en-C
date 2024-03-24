@@ -1,0 +1,35 @@
+{Ecrire un programme en langage C qui permet de simuler le jeu du nombre caché.
+Dans ce jeu, l’ordinateur choisit un nombre (H) au hasard entre 1 et 1000 ; il faut ensuite, pour le
+joueur, le deviner en dix questions au plus. A chaque fois que le joueur donne une réponse (R),
+l’ordinateur répond par :
+ « trop petit » si le nombre donné (R) est plus petit que celui à deviner (H)
+ ou « trop grand » si le nombre donné (R) est plus grand que celui à deviner (H)
+ ou « gagné » si c’est le nombre exact (c’est-à-dire H = R).
+On utilisera la fonction rand() pour générer le nombre H de l’ordinateur (rand()%1000 donne un
+entier compris entre 0 et 999). Faites des recherches pour voir l’utilité de l’instruction
+srand(time(null)) ;}
+
+algorithme plus_oui_moins;
+var test,mys,essai;
+	trouve : booleen;
+debut
+	mys <- random(1,1000);
+	essai <- 1; trouve <- faux;
+	tantque (essai <= 10) et NON trouve faire 
+	debut
+		ecrire('Essai ',essai,' : ');
+		lire(test);
+		si test=mys alors
+		debut
+			ecrire('Bravo ! ');
+			trouve <- vrai;
+		fin
+		sinon si test > mys alors
+			ecrire('Trop grand');
+		sinon
+			ecrire('Trop petit');
+		essai <- essai +1;
+	fin
+	si NON trouve alors 
+		ecrire('Game Over ! Le nombre était ',mys);
+fin;

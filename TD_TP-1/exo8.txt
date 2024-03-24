@@ -1,0 +1,42 @@
+{a) Ecrire une procédure permettant de déterminer si un nombre entier est premier. Elle comportera
+deux arguments : le nombre à examiner et un indicateur booléen (0 ou 1) précisant si ce nombre est
+premier ou non.
+b) Ecrire la procédure précédente sous forme d'une fonction.
+c) Donner une traduction des fonctions ainsi écrites en C.}
+
+** a)
+procedure estPremier(n:entier;VAR etat : entier);
+VAR i:entier;
+debut
+	si n<=1 alors
+		etat <- 0;
+	sinon
+	 debut
+		i <- 2; etat <- 1;
+		tantque i<=(n DIV 2) et (etat=1) faire
+		debut
+			si n MOD i = 0 alors
+				etat <- 0;
+			i <- i + 1;
+		fin;
+	 fin;
+fin;
+
+** b)
+fonction estPremier(n:entier):entier;
+VAR i:entier;
+debut
+	si n<=1 alors
+		return 0;
+	sinon
+	debut
+		i <- 2;
+		tantque i<=(n DIV 2) faire
+		debut
+			si n MOD i = 0 alors
+				return 0;
+			i <- i + 1;
+		fin;
+		return 1;
+	fin;
+fin;

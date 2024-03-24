@@ -1,0 +1,53 @@
+Discuter du choix entre une fonction et une procédure puis écrire celles qui permettent :
+
+1) d’afficher le carré d’un entier donné en paramètre
+- Puisqu'on ne fait qu'afficher : procedure
+
+procedure carre(n:entier);
+debut
+	ecrire(n*n);
+fin;
+
+2) de retourner le maximum entre deux entiers donnés en paramètre
+- Puisqu'on a besoin de retourner une valeur, le plus simple serait d'utiliser une foncion
+
+fonction maxim(a,b:entier):entier;
+debut
+	si a>=b alors
+		return a;
+	sinon
+		return b;
+fin;
+
+3) de déterminer si un entier donné en paramètre est pair ou pas
+- Si c'est pour determiner avec un message on utilise une procedure
+
+procedure parite(n:entier);
+debut
+	si n MOD 2 = 0 alors
+		ecrire('Paire');
+	sinon
+		ecrire('Impaire');
+fin;
+
+4) de savoir si un entier est divisible par un autre
+- Pour afficher un message disant qu'il est divisible ou pas, on utilise une procedure
+
+procedure divisible(a,b:entier);
+debut
+	si a MOD b = 0 alors
+		ecrire('divisible');
+	sinon
+		ecrire('Pas divisible');
+fin;
+
+5) d’afficher tous les diviseurs d’un entier donné en paramètre
+- Puisqu'on fait qu'afficher
+
+procedure diviseurs(n:entier);
+var i:entier;
+debut
+	pour i <- 1 à n faire
+		si n MOD i = 0 alors
+			ecire(i); 
+fin;

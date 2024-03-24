@@ -1,0 +1,20 @@
+{Écrire en un minimum de lignes l’algorithme d’un sous-programme
+permettant de dessiner le motif ci-dessous. Le nombre de motifs et la
+longueur du motif seront passés en paramètres du sous-programme.
+Dans cet exemple, le motif de base est répété 3 fois et la base d’un
+triangle est de longueur 4.
+2. Donner la traduction du programme précédent en C.}
+
+procedure figure(occ,base:entier);
+var
+debut
+	pour i <- 1 à occ faire
+	debut
+		pour j <- 1 à base faire
+		debut
+			pour k <- 1 à j faire
+				ecrire('*');
+			ecrireln;
+		fin;
+	fin;
+fin;
